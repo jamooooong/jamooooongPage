@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import WebLayout from "./layout";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { HomePage } from "./pages//HomePage/HomePage.jsx";
@@ -9,7 +9,7 @@ import { AboutPage } from "./pages/AboutPage/AboutPage.jsx";
 const router = createBrowserRouter([
   {
     path: "/jamooooongPage/",
-    element: <App />,
+    element: <WebLayout />,
     children: [
       {
         path: "/jamooooongPage/",
