@@ -6,8 +6,13 @@ import Footer from "./Footer/Footer";
 export default function WebLayout() {
   return (
     <>
-      <Header />
-      <Outlet />
+      <div className="sticky">
+        <Header />
+      </div>
+      <div className=" max-h-min">
+        <Outlet />
+      </div>
+
       <Footer />
     </>
   );
