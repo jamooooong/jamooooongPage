@@ -6,7 +6,7 @@ import Footer from "./Footer/Footer";
 export default function WebLayout() {
   return (
     <>
-      <div className="sticky">
+      <div className="sticky top-0 z-10">
         <Header />
       </div>
       <div className="sm:w-3/5 mx-auto min-h-screen px-3 py-2">

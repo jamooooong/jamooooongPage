@@ -31,11 +31,13 @@ export default function Header() {
         <div className="sm:w-3/5 place-self-center mx-auto">
           <nav className="mx-auto flex justify-between py-2 px-3">
             <div>
-              <a href="./">
-                <img className="h-8" src={logoSvg} alt="logo" />
-              </a>
+              {!showMenu && (
+                <a href="./">
+                  <img className="h-8" src={logoSvg} alt="logo" />
+                </a>
+              )}
             </div>
-            <div className="my-auto hidden sm:block ">
+            <div className="my-auto hidden sm:block font-medium ">
               <a href="./about" className="mx-4">
                 About me
               </a>
@@ -67,8 +69,8 @@ export default function Header() {
         </div>
 
         {showMenu && (
-          <div className="flex flex-col w-full h-full bg-gray-800 px-3">
-            <div className="flex flex-col text-white font-medium">
+          <div className="flex flex-col w-full h-full bg-gray-800 px-3 animate-growDown">
+            <div className="flex flex-col text-white font-medium animate-fadeInDown mx-4">
               <a href="./" className="my-4">
                 Home
               </a>
@@ -84,7 +86,7 @@ export default function Header() {
               <a href="./project" className="my-4">
                 Project
               </a>
-              <a href="./career" className="mt-4 mb-6">
+              <a href="./career" className="mt-4 mb-8">
                 Career
               </a>
             </div>
