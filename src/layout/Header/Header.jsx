@@ -1,35 +1,60 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import logoSvg from "../../assets/images/svg/logo.svg";
 import menuSvg from "../../assets/images/svg/menu.svg";
 import closeSvg from "../../assets/images/svg/close.svg";
 
+const WINDOWSIZE = 660; // 660px(sm) 이상일 때
+
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= WINDOWSIZE) {
+        setShowMenu(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // window size 확인
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <header className=" bg-gray-800 backdrop-blur-md">
-        <div className="">
+      <header className="bg-gray-800 backdrop-blur-md">
+        <div className="sm:w-3/5 place-self-center mx-auto">
           <nav className="mx-auto flex justify-between py-2 px-2">
             <div>
-              <img className="h-8" src={logoSvg} alt="logo" />
-            </div>
-            <div className="my-auto hidden lg:block text-white">
-              <a href="./about" className="mx-4">
-                Portfolio
-              </a>
-              <a href="./about" className="mx-4">
-                about
-              </a>
-              <a href="./about" className="mx-4">
-                link
+              <a href="./">
+                <img className="h-8" src={logoSvg} alt="logo" />
               </a>
             </div>
-            <button className="my-auto hidden lg:block">
-              <p className=" text-white">something</p>
-            </button>
+            <div className="my-auto hidden sm:block text-white">
+              <a href="./about" className="mx-4">
+                About me
+              </a>
+              <a href="./skills" className="mx-4">
+                Skills
+              </a>
+              <a href="./archiving" className="mx-4">
+                Archiving
+              </a>
+              <a href="./project" className="mx-4">
+                Project
+              </a>
+              <a href="./career" className="mx-4">
+                Career
+              </a>
+            </div>
+
             <button
-              className="block lg:hidden"
+              className="block sm:hidden"
               onClick={() => setShowMenu(!showMenu)}
             >
               {showMenu ? (
@@ -48,13 +73,19 @@ export default function Header() {
                 Home
               </a>
               <a href="./about" className="my-4">
-                Portfolio
+                About me
               </a>
-              <a href="./about" className="my-4">
-                about
+              <a href="./skills" className="my-4">
+                Skills
               </a>
-              <a href="./about" className="my-4">
-                link
+              <a href="./archiving" className="my-4">
+                Archiving
+              </a>
+              <a href="./project" className="my-4">
+                Project
+              </a>
+              <a href="./career" className="my-4">
+                Career
               </a>
             </div>
           </div>
