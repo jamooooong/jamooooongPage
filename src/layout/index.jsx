@@ -9,10 +9,10 @@ export default function WebLayout() {
       <div className="sticky">
         <Header />
       </div>
-      <div className="sm:w-3/5 mx-auto min-h-screen">
+      <div className="sm:w-3/5 mx-auto min-h-screen px-3 py-2">
         <Outlet />
       </div>
-      <div className="sm:w-3/5 mx-auto">
+      <div className="">
         <Footer />
       </div>
     </>

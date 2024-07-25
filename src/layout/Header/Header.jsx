@@ -27,15 +27,15 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-gray-800 backdrop-blur-md">
+      <header className=" bg-mainDarkGray text-white backdrop-blur-md text-sm">
         <div className="sm:w-3/5 place-self-center mx-auto">
-          <nav className="mx-auto flex justify-between py-2 px-2">
+          <nav className="mx-auto flex justify-between py-2 px-3">
             <div>
               <a href="./">
                 <img className="h-8" src={logoSvg} alt="logo" />
               </a>
             </div>
-            <div className="my-auto hidden sm:block text-white">
+            <div className="my-auto hidden sm:block ">
               <a href="./about" className="mx-4">
                 About me
               </a>
@@ -67,8 +67,8 @@ export default function Header() {
         </div>
 
         {showMenu && (
-          <div className="flex flex-col w-full h-full bg-gray-800 p-2">
-            <div className="flex flex-col text-white">
+          <div className="flex flex-col w-full h-full bg-gray-800 px-3">
+            <div className="flex flex-col text-white font-medium">
               <a href="./" className="my-4">
                 Home
               </a>
@@ -84,7 +84,7 @@ export default function Header() {
               <a href="./project" className="my-4">
                 Project
               </a>
-              <a href="./career" className="my-4">
+              <a href="./career" className="mt-4 mb-6">
                 Career
               </a>
             </div>
