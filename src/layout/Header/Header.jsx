@@ -1,57 +1,97 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import logoSvg from "../../assets/images/svg/logo.svg";
 import menuSvg from "../../assets/images/svg/menu.svg";
 import closeSvg from "../../assets/images/svg/close.svg";
 
+const WINDOWSIZE = 660; // 660px(sm) 이상일 때
+
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= WINDOWSIZE) {
+        setShowMenu(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // window size 확인
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <header className=" bg-gray-800">
-        <nav className="mx-auto flex justify-between py-2 px-2">
-          <div>
-            <img className="h-8" src={logoSvg} alt="logo" />
-          </div>
-          <div className="my-auto hidden lg:block text-white">
-            <a href="./about" className="mx-4">
-              Portfolio
-            </a>
-            <a href="./about" className="mx-4">
-              about
-            </a>
-            <a href="./about" className="mx-4">
-              link
-            </a>
-          </div>
-          <button className="my-auto hidden lg:block">
-            <p className=" text-white">something</p>
-          </button>
-          <button className="block lg:hidden" onClick={() => setShowMenu(true)}>
-            <img className="h-8" src={menuSvg} alt="menu" />
-          </button>
-          {showMenu && (
-            <div className="absolute top-0 left-0 w-full h-full bg-gray-800 p-2">
-              <button onClick={() => setShowMenu(false)} className="bg-red-400">
-                <img className="h-8" src={closeSvg} alt="close" />
-              </button>
-              <div className="flex flex-col text-white">
-                <a href="./" className="my-4">
-                  Home
+      <header className=" bg-mainDarkGray text-white backdrop-blur-md text-sm">
+        <div className="sm:w-3/5 place-self-center mx-auto">
+          <nav className="mx-auto flex justify-between py-2 px-3">
+            <div>
+              {!showMenu && (
+                <a href="./">
+                  <img className="h-8" src={logoSvg} alt="logo" />
                 </a>
-                <a href="./about" className="my-4">
-                  Portfolio
-                </a>
-                <a href="./about" className="my-4">
-                  about
-                </a>
-                <a href="./about" className="my-4">
-                  link
-                </a>
-              </div>
+              )}
             </div>
-          )}
-        </nav>
+            <div className="my-auto hidden sm:block font-medium ">
+              <a href="./about" className="mx-4">
+                About me
+              </a>
+              <a href="./skills" className="mx-4">
+                Skills
+              </a>
+              <a href="./archiving" className="mx-4">
+                Archiving
+              </a>
+              <a href="./project" className="mx-4">
+                Project
+              </a>
+              <a href="./career" className="mx-4">
+                Career
+              </a>
+            </div>
+
+            <button
+              className="block sm:hidden"
+              onClick={() => setShowMenu(!showMenu)}
+            >
+              {showMenu ? (
+                <img className="h-8" src={closeSvg} alt="close" />
+              ) : (
+                <img className="h-8" src={menuSvg} alt="menu" />
+              )}
+            </button>
+          </nav>
+        </div>
+
+        {showMenu && (
+          <div className="flex flex-col w-full h-full bg-gray-800 px-3 animate-growDown">
+            <div className="flex flex-col text-white font-medium animate-fadeInDown mx-4">
+              <a href="./" className="my-4">
+                Home
+              </a>
+              <a href="./about" className="my-4">
+                About me
+              </a>
+              <a href="./skills" className="my-4">
+                Skills
+              </a>
+              <a href="./archiving" className="my-4">
+                Archiving
+              </a>
+              <a href="./project" className="my-4">
+                Project
+              </a>
+              <a href="./career" className="mt-4 mb-8">
+                Career
+              </a>
+            </div>
+          </div>
+        )}
       </header>
     </>
   );
