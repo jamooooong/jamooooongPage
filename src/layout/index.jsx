@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 export default function WebLayout() {
   return (
@@ -9,7 +9,7 @@ export default function WebLayout() {
       <div className="sticky top-0 z-10">
         <Header />
       </div>
-      <div className="sm:w-3/5 mx-auto min-h-screen px-3 py-2">
+      <div className="mx-auto min-h-screen py-2">
         <Outlet />
       </div>
       <div className="">
