@@ -60,12 +60,12 @@ export function HomePage() {
             <p className=" text-4xl text-red_01 font-bold mb-20">나의 발자취</p>
             <div className="flex flex-col gap-12">
               <div className="flex sm:flex-row flex-col sm:justify-between sm:gap-0 gap-12">
-                <div className="flex flex-col w-1/2 sm:h-[7.5rem]">
+                <div className="flex flex-col sm:w-1/2 sm:h-[7.5rem]">
                   <p className=" font-bold text-xl  mb-1.5">Education</p>
                   <p className=" text-base  mb-1.5">별내고등학교 졸업</p>
                   <p className=" text-base">광운대학교 정보융합학부 입학</p>
                 </div>
-                <div className="flex flex-col w-1/2 sm:h-[7.5rem]">
+                <div className="flex flex-col sm:w-1/2 sm:h-[7.5rem]">
                   <p className=" font-bold text-xl mb-1.5">Skill</p>
                   <p className=" text-base  mb-1.5">
                     Adobe Photoshop / illustrator / lightroom
@@ -75,23 +75,23 @@ export function HomePage() {
                 </div>
               </div>
               <div className="flex sm:flex-row flex-col sm:justify-between sm:gap-0 gap-12">
-                <div className="flex flex-col w-1/2 sm:h-[7.5rem]">
+                <div className="flex flex-col sm:w-1/2 sm:h-[7.5rem]">
                   <p className=" font-bold text-xl mb-1.5">Work</p>
                   <p className=" text-base  mb-1.5">(주)써밋컴퍼니 재직</p>
                   <p className=" text-base">광운대학교 정보융합학부 입학</p>
                 </div>
-                <div className="flex flex-col w-1/2 sm:h-[7.5rem] ">
+                <div className="flex flex-col sm:w-1/2 sm:h-[7.5rem] ">
                   <p className=" font-bold text-xl mb-1.5">Activity</p>
                   <p className=" text-base">Goorm univ</p>
                 </div>
               </div>
               <div className="flex sm:flex-row flex-col sm:justify-between sm:gap-0 gap-12">
-                <div className="flex flex-col w-1/2 sm:h-[7.5rem]">
+                <div className="flex flex-col sm:w-1/2 sm:h-[7.5rem]">
                   <p className=" font-bold text-xl mb-1.5">Project</p>
                   <p className=" text-base mb-1.5">전북짹짹이</p>
                   <p className=" text-base">rankit</p>
                 </div>
-                <div className="flex flex-col w-1/2 sm:h-[7.5rem]">
+                <div className="flex flex-col sm:w-1/2 sm:h-[7.5rem]">
                   <p className=" font-bold text-xl mb-1.5">Scope</p>
                   <p className=" text-base mb-1.5">ui design</p>
                   <p className=" text-base">Frontend</p>
