@@ -39,7 +39,7 @@ export function AboutPage() {
         <div className="sm:w-3/5 mx-auto px-3">
           <div className="flex sm:flex-row flex-col">
             <div className="flex flex-col mt-20 sm:mt-0 sm:w-2/3 sm:ml-auto gap-12">
-              <p className=" text-4xl text-red_01 font-bold">Hobby</p>
+              <p className=" text-4xl text-red_01 font-bold">Like</p>
               <div className="flex sm:flex-row flex-col w-full gap-4">
                 <img src="https://github.com/user-attachments/assets/ae9ee2da-0968-4fa3-8231-4633078eae6e" />
                 <div className="flex flex-col gap-4">
