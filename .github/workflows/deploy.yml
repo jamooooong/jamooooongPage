@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3 # 버전 v3로 업데이트
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v3 # 버전 v3로 업데이트
+        uses: actions/setup-node@v3
         with:
           node-version: 16
 
@@ -23,10 +23,14 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Build project
+        env:  # 환경 변수를 설정합니다.
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3 # 버전 v3로 업데이트
+        uses: actions/upload-artifact@v3
         with:
           name: production-files
           path: ./dist
@@ -39,7 +43,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3 # 버전 v3로 업데이트
+        uses: actions/download-artifact@v3
         with:
           name: production-files
           path: ./dist
