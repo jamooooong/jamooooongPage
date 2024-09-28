@@ -7,6 +7,7 @@ export function InputSmall({ label, placeholder, type, name }) {
         className="w-full text-gray_02 text-base border-b-2 p-4"
         type={type}
         name={name}
+        required
       />
     </div>
   );
