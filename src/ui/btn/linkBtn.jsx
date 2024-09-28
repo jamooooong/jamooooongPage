@@ -1,4 +1,4 @@
-import LinkIcon from '../../../assets/images/svg/link_icon.svg';
+import LinkIcon from '../../assets/images/svg/link-icon.svg';
 
 export function LinkBtn({ text, link }) {
   return (

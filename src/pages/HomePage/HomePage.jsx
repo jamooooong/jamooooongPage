@@ -1,7 +1,4 @@
-import Profile_Img from '../../assets/images/profile_img.png';
-
-import LinkBtn from './_components/linkBtn';
-
+import { Profile } from '../../ui/_components/profile';
 import { EmailSendForm } from './_components/emailSendForm';
 
 export function HomePage() {
@@ -10,20 +7,7 @@ export function HomePage() {
       {/* 1div */}
       <div className="sm:w-3/5 mx-auto py-40 text-gray_01 px-3">
         <div className="flex sm:flex-row flex-col">
-          <div className="flex flex-col w-60 mr-24 sm:fixed">
-            <img src={Profile_Img} alt="profile_img" className=" mb-6" />
-            <p className="text-red_01 font-semibold text-base my-1">
-              javaScript
-            </p>
-            <p className=" text-3xl font-bold my-1">jamooooong</p>
-            <div className="flex flex-row my-5">
-              <LinkBtn text="github" link="https://github.com/jamooooong" />
-              <LinkBtn
-                text="instagram"
-                link="https://www.instagram.com/jamong__w.s/"
-              />
-            </div>
-          </div>
+          <Profile />
           <div className="flex flex-col mt-20 sm:mt-0 sm:w-2/3 sm:ml-auto">
             <p className=" text-4xl text-red_01 font-bold mb-12">
               안녕하세요. UI디자이너 박우석입니다.
