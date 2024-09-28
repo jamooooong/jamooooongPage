@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
-import logoSvg from "../../assets/images/svg/logo.svg";
-import menuSvg from "../../assets/images/svg/menu.svg";
-import closeSvg from "../../assets/images/svg/close.svg";
+import { useState, useEffect } from 'react';
+import logoSvg from '../../assets/images/svg/logo.svg';
+import RabbitLogo from '../../assets/images/svg/rabbit-logo.svg';
+import menuSvg from '../../assets/images/svg/menu.svg';
+import closeSvg from '../../assets/images/svg/close.svg';
 
 const WINDOWSIZE = 660; // 660px(sm) 이상일 때
 
@@ -15,13 +16,13 @@ export default function Header() {
       }
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     // window size 확인
     handleResize();
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -33,7 +34,7 @@ export default function Header() {
             <div>
               {!showMenu && (
                 <a href="./">
-                  <img className="h-8" src={logoSvg} alt="logo" />
+                  <img className="h-8" src={RabbitLogo} alt="logo" />
                 </a>
               )}
             </div>
