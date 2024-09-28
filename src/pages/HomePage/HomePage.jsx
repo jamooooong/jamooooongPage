@@ -1,8 +1,8 @@
-import Profile_Img from '../../../public/imgs/profile_img.png';
-import { InputSmall } from './_components/inputSmall';
-import { InputLarge } from './_components/inputLarge';
+import Profile_Img from '../../assets/images/profile_img.png';
+
 import LinkBtn from './_components/linkBtn';
-import { SubmitBtn } from './_components/submitBtn';
+
+import { EmailSendForm } from './_components/emailSendForm';
 
 export function HomePage() {
   return (
@@ -106,22 +106,7 @@ export function HomePage() {
       <div className=" bg-white py-40 text-gray_01">
         <div className="sm:w-3/5 mx-auto px-3">
           <div className="flex flex-col mt-20 sm:mt-0 sm:w-2/3 sm:ml-auto">
-            <p className=" text-4xl text-gray_01 font-bold mb-20">
-              나의 발자취
-            </p>
-            <div className="flex flex-col gap-10 mb-4">
-              <div className=" flex flex-row content-between gap-10 justify-between">
-                <InputSmall label="Name" placeholder="이름" />
-                <InputSmall label="Email" placeholder="이메일주소" />
-              </div>
-              <InputLarge
-                label="Message"
-                placeholder="문의사항을 입력해주세요"
-              />
-            </div>
-            <div className=" ml-auto">
-              <SubmitBtn text="submit" />
-            </div>
+            <EmailSendForm />
           </div>
         </div>
       </div>
