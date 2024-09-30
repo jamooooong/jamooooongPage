@@ -55,7 +55,7 @@ export function HomePage() {
                 <div className="flex flex-col sm:w-1/2 sm:h-[7.5rem]">
                   <p className=" font-bold text-xl mb-1.5">Skill</p>
                   <p className=" text-base  mb-1.5">
-                    Adobe Photoshop / illustrator / lightroom
+                    Adobe Photoshop / Illustrator / Lightroom
                   </p>
                   <p className=" text-base mb-1.5">Figma</p>
                   <p className=" text-base">React</p>
