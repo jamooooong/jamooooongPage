@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
-import logoSvg from '../../assets/images/svg/logo.svg';
+import { useLocation } from 'react-router-dom';
 import RabbitLogo from '../../assets/images/svg/rabbit-logo.svg';
 import menuSvg from '../../assets/images/svg/menu.svg';
-import closeSvg from '../../assets/images/svg/close.svg';
+import closeSvg from '../../assets/images/svg/close-white.svg';
 
 const WINDOWSIZE = 660; // 660px(sm) 이상일 때
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,9 +27,13 @@ export default function Header() {
     };
   }, []);
 
+  const isActive = (path) => {
+    return location.pathname === path ? 'text-xl' : '';
+  };
+
   return (
     <>
-      <header className=" bg-mainDarkGray text-white backdrop-blur-md text-sm">
+      <header className=" bg-red_01 text-white backdrop-blur-md text-sm">
         <div className="sm:w-3/5 place-self-center mx-auto">
           <nav className="mx-auto flex justify-between py-2 px-3">
             <div>
@@ -39,19 +44,34 @@ export default function Header() {
               )}
             </div>
             <div className="my-auto hidden sm:block font-medium ">
-              <a href="./about" className="mx-4">
+              <a
+                href="./about"
+                className={`mx-4 ${isActive('/jamooooongPage/about')}`}
+              >
                 About me
               </a>
-              <a href="./skills" className="mx-4">
+              <a
+                href="./skills"
+                className={`mx-4 ${isActive('/jamooooongPage/skills')}`}
+              >
                 Skills
               </a>
-              <a href="./archiving" className="mx-4">
+              <a
+                href="./archiving"
+                className={`mx-4 ${isActive('/jamooooongPage/archiving')}`}
+              >
                 Archiving
               </a>
-              <a href="./project" className="mx-4">
+              <a
+                href="./project"
+                className={`mx-4 ${isActive('/jamooooongPage/project')}`}
+              >
                 Project
               </a>
-              <a href="./career" className="mx-4">
+              <a
+                href="./career"
+                className={`mx-4 ${isActive('/jamooooongPage/career')}`}
+              >
                 Career
               </a>
             </div>
@@ -72,22 +92,37 @@ export default function Header() {
         {showMenu && (
           <div className="flex flex-col w-full h-full bg-gray-800 px-3 animate-growDown">
             <div className="flex flex-col text-white font-medium animate-fadeInDown mx-4">
-              <a href="./" className="my-4">
+              <a href="./" className={`my-4 ${isActive('/jamooooongPage/')}`}>
                 Home
               </a>
-              <a href="./about" className="my-4">
+              <a
+                href="./about"
+                className={`my-4 ${isActive('/jamooooongPage/about')}`}
+              >
                 About me
               </a>
-              <a href="./skills" className="my-4">
+              <a
+                href="./skills"
+                className={`my-4 ${isActive('/jamooooongPage/skills')}`}
+              >
                 Skills
               </a>
-              <a href="./archiving" className="my-4">
+              <a
+                href="./archiving"
+                className={`my-4 ${isActive('/jamooooongPage/archiving')}`}
+              >
                 Archiving
               </a>
-              <a href="./project" className="my-4">
+              <a
+                href="./project"
+                className={`my-4 ${isActive('/jamooooongPage/project')}`}
+              >
                 Project
               </a>
-              <a href="./career" className="mt-4 mb-8">
+              <a
+                href="./career"
+                className={`my-4 mb-8 ${isActive('/jamooooongPage/career')}`}
+              >
                 Career
               </a>
             </div>
