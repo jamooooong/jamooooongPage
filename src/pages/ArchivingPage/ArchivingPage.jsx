@@ -34,7 +34,7 @@ export function ArchivingPage() {
                 tool="Figma"
                 text="깃허브 시각화 프로젝트 (진행중)"
                 linkBtn_text="Figma"
-                linkBtn_link="https://www.figma.com/design/n11ktcSdQi9AuGdmJeg44M/gitbal-ver.02-shared?m=auto&t=SLFpDwzuSwMEa5lF-1"
+                linkBtn_link="https://www.figma.com/design/HrffvqvURB9v9zJAX5JSEM/gitbal-ver.02-(Shared)?m=auto&t=l6wL5nM2u0EGQlBL-6"
               />
               <ArchivingBox
                 imgSrc="https://github.com/user-attachments/assets/e1b330c4-77de-4a40-9ccc-b785727b1532"
