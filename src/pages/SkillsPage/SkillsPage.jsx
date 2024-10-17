@@ -15,7 +15,7 @@ export function SkillsPage() {
               <p>Adobe Lightroom</p>
             </div>
             <div className="flex flex-col sm:w-1/2 sm:h-[7.5rem] sm:mb-0 mb-12">
-              <p>Adobe Figma</p>
+              <p>Figma</p>
               <p>Lottie (공부중)</p>
               <p>Phase (공부중)</p>
             </div>
