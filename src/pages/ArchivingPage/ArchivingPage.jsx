@@ -32,7 +32,7 @@ export function ArchivingPage() {
                 imgSrc="https://github.com/user-attachments/assets/b962b54c-847e-48bc-bb97-221c86b3e83f"
                 label="ranikt"
                 tool="Figma"
-                text="깃허브 시각화 프로젝트 (진행중)"
+                text="깃허브 시각화 프로젝트"
                 linkBtn_text="Figma"
                 linkBtn_link="https://www.figma.com/design/HrffvqvURB9v9zJAX5JSEM/gitbal-ver.02-(Shared)?m=auto&t=l6wL5nM2u0EGQlBL-6"
               />
