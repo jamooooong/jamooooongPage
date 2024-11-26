@@ -10,7 +10,7 @@ export function ProjectBox({
 }) {
   return (
     <>
-      <div className="flex flex-col shadow-lg  border-gray_02 rounded-lg bg-white p-2 text-gray_01 ">
+      <div className="flex flex-col shadow-lg border-gray_02 rounded-lg bg-white p-2 text-gray_01 ">
         <img
           src={imgSrc}
           className=" border-gray_03 shadow-lg rounded-lg mb-4"
